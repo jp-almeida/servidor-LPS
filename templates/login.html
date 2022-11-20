@@ -1,0 +1,21 @@
+<h3>Entrar em sua conta:</h3>
+<style>
+h5 {
+  color: red;
+}
+</style>
+{% for message in messages %}
+  <h5>{{message}}</h5>
+{% endfor %}
+<form method="post" action="login">
+  {% csrf_token %}
+  <p>Nome:</p>
+  <input type="text" name="username">
+  <p>Senha:</p>
+  <input type="password" name="password">
+  <br><br>
+  <input type="submit" value="Entrar">
+  <a href="register">
+    <input type="button" value="Não está cadastrado? Registre-se">
+  </a>
+</form>

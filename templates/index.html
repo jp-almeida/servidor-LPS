@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+<title>Django</title>
+</head>
+<body>
+<div style="width: 100%;">
+  {% if user.is_authenticated %}
+    <div style="width: 90%;">
+      <p>Bem-vindo(a), {{user.username}}</p>
+    </div>
+    <div style="width: 10%;">
+      <a href="logout">
+        <input type="button" value="Sair">
+      </a>
+    </div>
+  {% else %}
+    <div style="width: 90%;">
+      <p>Bem-vindo(a) ao nosso site!</p>
+    </div>
+    <div style="width: 10%;">
+      <a href="register">
+        <input type="button" value="Crie uma conta">
+      </a>
+    </div>
+  {% endif %}
+</div>
+<div style="display: flex;">
+  {% for item in items %}
+  <div style="margin-left: 5%;">
+    <div style="flex: 1; border: 2px solid yellow;">
+      {{item.name}}
+    </div>
+    <div style="flex: 1; border: 2px solid yellow;">
+      {{item.details}}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>

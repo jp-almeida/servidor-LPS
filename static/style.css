@@ -6,3 +6,15 @@
     flex: 1;
     border: 2px solid yellow;
 }
+
+.gradient-custom {
+background: linear-gradient(109.6deg, rgb(14, 11, 56) 11.2%, rgb(239, 37, 37) 101.1%); 
+}
+h1{
+    color: white;
+}
+
+.scroll {
+    max-height: 100%;
+    overflow-y: auto;
+}

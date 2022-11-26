@@ -1,5 +1,5 @@
 from django.contrib import admin
-from myapp.models import Item
+from myapp.models import Lance
 # Register your models here.
 
-admin.site.register(Item)
+admin.site.register(Lance)
